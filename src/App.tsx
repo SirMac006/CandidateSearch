@@ -1,15 +1,16 @@
 import { Outlet } from 'react-router-dom';
-import Nav from './components/Nav';
+import Navbar from './components/Nav';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Nav />
-      <main>
-        <Outlet />
-      </main>
-    </>
+    <div>
+      {/* Navigation bar for links between pages */}
+      <Navbar />
+      
+      {/* The Outlet renders the current matched route's element */}
+      <Outlet />
+    </div>
   );
-}
+};
 
 export default App;
